@@ -40,7 +40,7 @@ public class CalculatorController {
         return filename;
     }
 
-//    postman: http://localhost:8082/check-finished/6ce43693-8a8b-4cd3-8d9c-6fd93a66cea0.txt
+//    postman: http://localhost:8082/check-finished/6a283a67-e765-4c96-8050-3fbb09d826ba.txt
     @GetMapping("/check-finished/{filename}")
     public String checkFinished(@PathVariable String filename) throws IOException {
         File file = new File(filename);
@@ -63,7 +63,7 @@ public class CalculatorController {
         }
     }
 
-//    postman:  http://localhost:8082/results/6ce43693-8a8b-4cd3-8d9c-6fd93a66cea0.txt
+//    postman:  http://localhost:8082/results/6a283a67-e765-4c96-8050-3fbb09d826ba.txt
     @GetMapping("/results/{filename}")
     public ModelAndView getFileView(@PathVariable String filename) throws IOException, ClassNotFoundException {
         ModelAndView mv = new ModelAndView("file-view");

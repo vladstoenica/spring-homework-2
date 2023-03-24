@@ -24,13 +24,13 @@ public class CalculatorService {
     private Double makeOperation(String operationType, List<Double> numbers) throws InterruptedException {
         Thread.sleep(4000);
         switch (operationType) {
-            case "sum":
+            case "+":
                 return numbers.get(0) + numbers.get(1);
-            case "dif":
+            case "-":
                 return numbers.get(0) - numbers.get(1);
-            case "prod":
+            case "*":
                 return numbers.get(0) * numbers.get(1);
-            case "div":
+            case "/":
                 return numbers.get(0) / numbers.get(1);
             default:
                 System.err.println("Operator not supported");
